@@ -3,7 +3,12 @@ const { Router } = require('express');
 const { check } = require('express-validator');
 
 //Middleware
-const { validarCampos } = require('../middleware/validar-campos');
+const {
+     validarJWT,
+     validarCampos,
+     esAdminRol,
+     tieneRole
+    } =require('../middleware');
 
 //Validadores
 const { esRoleValido, emailExiste, exiteUsuarioPorId } = require('../helpers/bd-validatos');
@@ -32,12 +37,14 @@ router.post('/',[
 router.put('/:id',[
     check('id','No es un ID válido').isMongoId(),
     check('id').custom(exiteUsuarioPorId),
-    check('role').custom(esRoleValido),
-    
+    check('role').custom(esRoleValido),    
     validarCampos
 ], usuariosPut );
 
 router.delete('/:id',[
+    validarJWT,
+    //esAdminRol, Esta validacion es solo para administradores
+    tieneRole('ADMIN_ROLE','VENTAS_ROLE'),
     check('id','No es un ID válido').isMongoId(),
     check('id').custom(exiteUsuarioPorId),
     validarCampos

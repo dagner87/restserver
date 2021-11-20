@@ -56,11 +56,7 @@ const usuariosPut = async (req, res = response) => {
     }
 
     const usuario = await Usuario.findByIdAndUpdate(id,resto);
-    //Guardar en BD
-    //await usuario.save();
-   // console.log(usuario);
-
-
+   
     res.json({
         msg: 'put API - usuariosPut',
         usuario
@@ -81,8 +77,7 @@ const usuariosDelete = async (req, res = response) => {
     
     // Actualiza el usuario state del usuario en la bd
     const usuario = await Usuario.findByIdAndUpdate(id,{state:false});
-
-    res.json({
+       res.json({
         msg: 'El usuario ha sido borrado',
         usuario
     });
