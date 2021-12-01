@@ -1,0 +1,22 @@
+[
+    {
+        "name":"Fabricante Chino",
+        "country":"China",
+        "address":"1200 SW TOKIO",
+        "phone":"7867946337",
+        "contact":"TONCHINWUAN",
+        "observations":"Proveedor de CLUB CARS KITS",
+        "state":true
+    },
+    {
+        "name":"Fabricante USA",
+        "country":"USA",
+        "address":"1200 SW NUEVA YORK",
+        "phone":"7867946331",
+        "contact":"JHON SMIHT",
+        "observations":"Proveedor de ALPHA KITS",
+        "state":true
+    },
+
+    
+]

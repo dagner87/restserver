@@ -1,6 +1,8 @@
 
+
 const Role = require('../models/role');
-const Usuario = require('../models/usuario');
+
+const {Usuario, Categoria, Producto, Almacen, Proveedor} = require('../models');
 
 const esRoleValido = async (role = '') => {
  const existRole = await Role.findOne({role}); 
@@ -25,8 +27,49 @@ const exiteUsuarioPorId = async (id) => {
       throw new Error(`El id ${ id }, no existe en la BD`);
     }
 }
+
+/** VALIDAROR PERSONALIZADO DE CATEGORIA */
+const exiteCategoriaPorId = async (id) => {
+//Verificar si existe el id    
+  const existCategoria = await Categoria.findById(id);
+    if(!existCategoria) {    
+      throw new Error(`El id ${ id }, no existe en la BD`);
+    }
+}
+/** VALIDAROR PERSONALIZADO DE PRODUCTO */
+const exiteProdutoPorId = async (id) => {
+//Verificar si existe el id    
+  const existProducto = await Producto.findById(id);
+    if(!existProducto) {    
+      throw new Error(`El id ${ id }, no existe en la BD`);
+    }
+}
+/** VALIDAROR PERSONALIZADO DE ALMACEN */
+const exiteAlmacenPorId = async (id) => {
+  //Verificar si existe el id    
+    const existeAlmacen = await Almacen.findById(id);
+      if(!existeAlmacen) {    
+        throw new Error(`El id ${ id }, no existe en la BD`);
+      }
+  }
+/** VALIDAROR PERSONALIZADO DE PROVEEDOR */
+const exiteProveedorPorId = async (id) => {
+  //Verificar si existe el id    
+    const existe = await Proveedor.findById(id);
+      if(!existe) {    
+        throw new Error(`El id ${ id }, no existe en la BD`);
+      }
+  }
+
+
+
+
 module.exports = {
     esRoleValido,
     emailExiste,
-    exiteUsuarioPorId
+    exiteUsuarioPorId,
+    exiteCategoriaPorId,
+    exiteProdutoPorId,
+    exiteAlmacenPorId,
+    exiteProveedorPorId
 }

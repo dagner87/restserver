@@ -1,0 +1,11 @@
+{
+    "name": "BOX STORAGE",
+    "descripcion": "",
+    "img": "",
+    "precio": 15,
+    "cantidad": 10,
+    "disponible": true,
+    "categoria": "61a262f0d190038e6b7a11cd",
+    "almacen": "61a3b56af822b411fa63dab8",
+    "proveedor": "61a3b74df822b411fa63dad0"
+}

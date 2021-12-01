@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "61a262f0d190038e6b7a11cd"
+  },
+  "name": "EZGO",
+  "descripcion": "CARRO EZGO",
+  "state": true,
+  "usuario": {
+    "$oid": "61970d3f9bce98dec05d54cc"
+  }
+},{
+  "_id": {
+    "$oid": "61a268729f71b0c3fea0bc9a"
+  },
+  "name": "Tempo",
+  "descripcion": "CARRO Tempo",
+  "state": true,
+  "usuario": {
+    "$oid": "61970d3f9bce98dec05d54cc"
+  }
+},{
+  "_id": {
+    "$oid": "61a270d5dc944d54444acaa8"
+  },
+  "name": "CALLYON",
+  "descripcion": "CARRO CALLYON",
+  "state": true,
+  "usuario": {
+    "$oid": "61970d3f9bce98dec05d54cc"
+  }
+},{
+  "_id": {
+    "$oid": "61a39f00a679b20da66e3259"
+  },
+  "name": "CRUB CAR 6",
+  "descripcion": "CARRO CRLUB CAR 6 pasajeros",
+  "state": false,
+  "usuario": {
+    "$oid": "61970d3f9bce98dec05d54cc"
+  }
+}]

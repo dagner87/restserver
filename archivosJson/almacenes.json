@@ -1,0 +1,25 @@
+[
+{
+    "name": "ALMACEN1",   
+    "identificador":"1"
+},
+{
+    "name": "ALMACEN2",   
+	"identificador":"2"
+},
+{
+    "name": "ALMACEN3",    
+	"identificador":"3"
+},
+{
+    "name": "ALMACEN4",   
+	"identificador":"4"
+},
+{
+    "name": "ALMACEN5",   
+	"identificador":"5"
+},
+{
+    "name": "ALMACEN6",   
+	"identificador":"6"
+}]
