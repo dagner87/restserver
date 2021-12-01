@@ -11,11 +11,12 @@ class Server {
        
         //EndPoint
         this.paths = {
-            auth: '/api/auth',
-            usuarios: '/api/usuarios',
-            categorias: '/api/categorias',
-            productos: '/api/productos',
+            auth       : '/api/auth',
+            usuarios   : '/api/usuarios',
+            categorias : '/api/categorias',
+            productos  : '/api/productos',
             proveedores: '/api/proveedores',
+            buscar     : '/api/buscar',
         }
 
         //Conectar a bd
@@ -53,6 +54,7 @@ class Server {
         this.app.use( this.paths.categorias, require('../routes/categorias'));
         this.app.use( this.paths.productos, require('../routes/productos'));
         this.app.use( this.paths.proveedores, require('../routes/proveedores'));
+        this.app.use( this.paths.buscar, require('../routes/buscar'));
     }
 
     listen() {
