@@ -7,7 +7,7 @@ const { validarJWT, validarCampos, esAdminRol } = require('../middleware');
 const { exiteCategoriaPorId, 
         exiteProdutoPorId, 
         exiteProveedorPorId, 
-        exiteAlmacenPorId } = require('../helpers/bd-validatos');
+        exiteAlmacenPorId } = require('../helpers/db-validators');
 
 //Controllers
 const { crearProducto,

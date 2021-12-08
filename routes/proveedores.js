@@ -8,7 +8,7 @@ const { validarJWT, validarCampos, esAdminRol } = require('../middleware');
 
 //helpers
 
-const { exiteCategoriaPorId, exiteProveedorPorId } = require('../helpers/bd-validatos');
+const { exiteCategoriaPorId, exiteProveedorPorId } = require('../helpers/db-validators');
 
 //Controllers
 const { obtenerProveedores } = require('../controllers/proveedores');

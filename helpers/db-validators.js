@@ -60,6 +60,16 @@ const exiteProveedorPorId = async (id) => {
         throw new Error(`El id ${ id }, no existe en la BD`);
       }
   }
+/** VALIDAROR PERSONALIZADO DE COLECCIONES */
+const colecionesPermitidas =  (coleccion = '',colecciones = []) => {
+
+      const incluida = colecciones.includes(coleccion);
+       if(!incluida) {    
+        throw new Error(`La coleccion ${ coleccion }, no es permitida, ${ colecciones }`);
+      }
+
+    return true;  
+  }
 
 
 
@@ -71,5 +81,6 @@ module.exports = {
     exiteCategoriaPorId,
     exiteProdutoPorId,
     exiteAlmacenPorId,
-    exiteProveedorPorId
+    exiteProveedorPorId,
+    colecionesPermitidas
 }

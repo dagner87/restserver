@@ -11,7 +11,7 @@ const {
     } =require('../middleware');
 
 //Validadores
-const { esRoleValido, emailExiste, exiteUsuarioPorId } = require('../helpers/bd-validatos');
+const { esRoleValido, emailExiste, exiteUsuarioPorId } = require('../helpers/db-validators');
 
 const { usuariosGet,
         usuariosPut,
