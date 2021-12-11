@@ -8,7 +8,7 @@ const { validarJWT, validarCampos, validarArchivoSubir } = require('../middlewar
 const { colecionesPermitidas } = require('../helpers');
 
 //controllers
-const { cargarArchivo, actualizarArchivo, mostrarImagen } = require('../controllers/uploads');
+const { cargarArchivo, actualizarArchivo, mostrarImagen, actualizarArchivoCloudinary } = require('../controllers/uploads');
 
 
 /*******
@@ -27,7 +27,7 @@ const { cargarArchivo, actualizarArchivo, mostrarImagen } = require('../controll
      check('id','No es un id de Mongo válido').isMongoId(),
      check('coleccion').custom(c => colecionesPermitidas(c , ['usuarios','productos','proveedores'])), 
      validarCampos
-  ], actualizarArchivo);
+  ], actualizarArchivoCloudinary);// actualizarArchivo
 
 
    //OBTENER LINK DE LOS ARCHIVOS
