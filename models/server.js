@@ -5,13 +5,16 @@ const fileUpload = require('express-fileupload');
 
 const { dbConnection } = require('../database/confi');
 
+const { socketsController } = require('../sockets/sockets-controller');
+
 
 class Server {
 
     constructor() {
         this.app  = express();
         this.port = process.env.PORT;
-       
+        this.server = require('http').createServer(this.app);
+        this.io     = require('socket.io')(this.server);
        
         //EndPoint
         this.paths = {
@@ -32,6 +35,9 @@ class Server {
 
         // Rutas de mi aplicación
         this.routes();
+
+        //Sockets
+        this.sockets()
     }
 
     
@@ -70,8 +76,12 @@ class Server {
         this.app.use( this.paths.uploads, require('../routes/uploads'));
     }
 
+    sockets() {
+        this.io.on("connection", socketsController);
+    }
+
     listen() {
-        this.app.listen( this.port, () => {
+        this.server.listen( this.port, () => {
             console.log('Servidor corriendo en puerto', this.port );
         });
     }
