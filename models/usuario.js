@@ -29,7 +29,10 @@ const UsuarioSchema = Schema({
      type:Boolean,
      default:true
     },
-
+    remember:{
+     type:Boolean,
+     default:false
+    },
     google:{
      type:Boolean,
      default:false
