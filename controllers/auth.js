@@ -42,6 +42,7 @@ const login = async(req = request, res = response) => {
         const token = await generarJWT(usuario.id);
 
         res.json({
+            ok:true,
             usuario,
             token
         });
@@ -50,7 +51,8 @@ const login = async(req = request, res = response) => {
 
          console.log(error);
          res.status(500).json({
-            msg: 'Hable con el administrador'
+             ok:false,
+             msg: 'Hable con el administrador'
         });
     }
 
@@ -61,16 +63,19 @@ const login = async(req = request, res = response) => {
 
 const renewToken = async(req, res = response) => {
 
-    const uid = req.uid;
+    const uid = req.usuario._id;
 
+    //console.log(req.usuario._id);
+    
+    // Obtener el usuario por UID
+    const usuario = await Usuario.findById( uid );
     // Generar el TOKEN - JWT
     const token = await generarJWT( uid );
 
-    // Obtener el usuario por UID
-    const usuario = await Usuario.findById( uid );
 
 
     res.json({
+        ok: true,
         msg: "Nuevo token generado",
         token,
         usuario
