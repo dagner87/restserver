@@ -1,0 +1,220 @@
+[{
+  "_id": {
+    "$oid": "61970d3f9bce98dec05d54cc"
+  },
+  "name": "Emily02",
+  "email": "prueba0002@gmail.com",
+  "password": "$2a$10$RCQmhST4ou6mZtTg9khNJ.hXngp0KI4PfeEptotZKu9um06nvmv9y",
+  "role": "ADMIN_ROLE",
+  "state": true,
+  "google": false,
+  "__v": 0,
+  "img": "https://res.cloudinary.com/softcomsas/image/upload/v1639245432/x9tzif4svmyjkv9ftahz.jpg"
+},{
+  "_id": {
+    "$oid": "61aadbc8f2e077106dc9d1a4"
+  },
+  "name": "Dagner Alena",
+  "email": "dalenag87@gmail.com",
+  "password": "$2a$10$kPS0SOZ79bhXsekMRFL9EudBP.TbDvWTfVZUV5ihlKERHQ3.S0.QS",
+  "role": "ADMIN_ROLE",
+  "state": true,
+  "google": false,
+  "__v": 0,
+  "img": "https://res.cloudinary.com/softcomsas/image/upload/v1641353227/i8uoql8kdxzf8a8ox424.jpg",
+  "remember": false
+},{
+  "_id": {
+    "$oid": "61d0a5be389a728e747db281"
+  },
+  "name": "Wesinlao",
+  "email": "wesinlao@example.com",
+  "password": "$2a$10$47kAQVtMcJU6gpF3yutesODFrXaQX3hPu1CtX.ntNhYIbR5KP7PfG",
+  "role": "USER_ROLE",
+  "state": true,
+  "remember": false,
+  "google": false,
+  "__v": 0,
+  "img": "https://res.cloudinary.com/softcomsas/image/upload/v1641526500/bfbyvnyhndi5v3xkewlx.jpg"
+},{
+  "_id": {
+    "$oid": "61d2724c9a5d7e1362649f11"
+  },
+  "name": "Bernardoa",
+  "email": "alena@gmail.com",
+  "password": "$2a$10$wiMhhxBoqq0zQvB.dxuZ9O8ahNMrDvQeOL5u4hHRIazUFsWE39XR2",
+  "role": "USER_ROLE",
+  "state": true,
+  "remember": false,
+  "google": false,
+  "__v": 0,
+  "img": "https://res.cloudinary.com/softcomsas/image/upload/v1641526519/el53rvn8uwgtzls0imqp.jpg"
+},{
+  "_id": {
+    "$oid": "61d2728d9a5d7e1362649f15"
+  },
+  "name": "Sonai",
+  "email": "soniaa@gmail.com",
+  "password": "$2a$10$GcqaUc/tO5zBgkRl.Xx/wOk9lzBxxC05UB4CARaV/pizKHK9eBsOK",
+  "role": "USER_ROLE",
+  "state": true,
+  "remember": false,
+  "google": false,
+  "__v": 0,
+  "img": "https://res.cloudinary.com/softcomsas/image/upload/v1641526539/xpi4clgctwdwesqyrz4t.jpg"
+},{
+  "_id": {
+    "$oid": "61d505d2831a644b9a2acfe0"
+  },
+  "name": "Bernardito",
+  "email": "bernardito87@gmail.com",
+  "password": "$2a$10$3Ksb7tj.FdSCxJzFhrESI.9R2mmW83vYHy.0qIYlBi8eOGlt2x7cq",
+  "role": "USER_ROLE",
+  "state": true,
+  "remember": false,
+  "google": false,
+  "__v": 0,
+  "img": "https://res.cloudinary.com/softcomsas/image/upload/v1641526565/gkxqwurtgltyxcdwroew.jpg"
+},{
+  "_id": {
+    "$oid": "61d507482065e26ca0c6cd9b"
+  },
+  "name": "Bersache Alena",
+  "email": "bersache@gmail.com",
+  "password": "$2a$10$FLKkOMs5QgForzP5kJOfDO5BFK3IUCrHhxoGRvMibXdePER5yDEra",
+  "role": "USER_ROLE",
+  "state": true,
+  "remember": false,
+  "google": false,
+  "__v": 0,
+  "img": "https://res.cloudinary.com/softcomsas/image/upload/v1641526574/q8scmqzfbhvomanexgu1.jpg"
+},{
+  "_id": {
+    "$oid": "61d507e02065e26ca0c6cd9f"
+  },
+  "name": "Brad",
+  "email": "brad87@gmail.com",
+  "password": "$2a$10$/peBoKEFSnIT/4btBQCpBOoE//gBWPk7Njh3kSb5lS2amJeQAn/DK",
+  "role": "USER_ROLE",
+  "state": true,
+  "remember": false,
+  "google": false,
+  "__v": 0,
+  "img": "https://res.cloudinary.com/softcomsas/image/upload/v1641526588/aqpfc9te17gbsd8g2s9c.jpg"
+},{
+  "_id": {
+    "$oid": "61d5088f2065e26ca0c6cda3"
+  },
+  "name": "Elena Portales",
+  "email": "Elena@gmail.com",
+  "password": "$2a$10$I13JFxy13rT3RM22jL7/e.nNufigv4RIfFqfKAOICmovkK/WRtDmC",
+  "role": "USER_ROLE",
+  "state": true,
+  "remember": false,
+  "google": false,
+  "__v": 0,
+  "img": "https://res.cloudinary.com/softcomsas/image/upload/v1641526601/nj9oauyiwdyy1k0wi6py.jpg"
+},{
+  "_id": {
+    "$oid": "61d5090a2065e26ca0c6cda7"
+  },
+  "name": "Eduardo",
+  "email": "eduartdo7@gmail.com",
+  "password": "$2a$10$MeIvBXfMMTdhrBiFPkytEeE9t86cyrBB9xxeJEDLIygPeZc29vJ8O",
+  "role": "USER_ROLE",
+  "state": true,
+  "remember": false,
+  "google": false,
+  "__v": 0,
+  "img": "https://res.cloudinary.com/softcomsas/image/upload/v1641526612/dwheokm47bfx166ufxgk.jpg"
+},{
+  "_id": {
+    "$oid": "61d50a2e2065e26ca0c6cdab"
+  },
+  "name": "Bersache1 Alena",
+  "email": "bersache1@gmail.com",
+  "password": "$2a$10$it3OTHLUlz7j.LkRuxl4JuBN90S53AdSmkbq.sDenREkofYptUDsO",
+  "role": "USER_ROLE",
+  "state": true,
+  "remember": false,
+  "google": false,
+  "__v": 0,
+  "img": "https://res.cloudinary.com/softcomsas/image/upload/v1641526697/xmzdrpckkl8wjojzfzse.jpg"
+},{
+  "_id": {
+    "$oid": "61d50a5e2065e26ca0c6cdb1"
+  },
+  "name": "Bersache2 Alena",
+  "email": "bersache2@gmail.com",
+  "password": "$2a$10$ldeF.lFA6HrW2EJRbpYUaOS4vdfCKymHAdmiKhCy.3ZIBTkafjeUW",
+  "role": "USER_ROLE",
+  "state": true,
+  "remember": false,
+  "google": false,
+  "__v": 0,
+  "img": "https://res.cloudinary.com/softcomsas/image/upload/v1641526705/mlia27cmi9yuy1bbb29m.jpg"
+},{
+  "_id": {
+    "$oid": "61d50a6a2065e26ca0c6cdb5"
+  },
+  "name": "Bersache3 Alena",
+  "email": "bersache3@gmail.com",
+  "password": "$2a$10$P.KjrvhJwSyP.ENQDo9JqepxfWIPfUdKU86eTeFGKrMdgkbuj.GUy",
+  "role": "USER_ROLE",
+  "state": true,
+  "remember": false,
+  "google": false,
+  "__v": 0,
+  "img": "https://res.cloudinary.com/softcomsas/image/upload/v1641607064/nacfp0votqj8o2twotsz.jpg"
+},{
+  "_id": {
+    "$oid": "61d7bacc6b14a5f9388cc16f"
+  },
+  "name": "Bernardo Alena",
+  "email": "balenaf@gmail.com",
+  "password": "$2a$10$lV1QqlknKzKKWnwHtY90SuwZ/aTjquk9yU8bhqzf7eyeiYExvHqSC",
+  "role": "USER_ROLE",
+  "state": true,
+  "remember": false,
+  "google": false,
+  "__v": 0,
+  "img": "https://res.cloudinary.com/softcomsas/image/upload/v1641607064/nacfp0votqj8o2twotsz.jpg"
+},{
+  "_id": {
+    "$oid": "61d8e1cb0eeb55b3bd0c70e3"
+  },
+  "name": "rengad",
+  "email": "rengad@gmail.com",
+  "password": "$2a$10$RFg7zVD5qTLx0rrt19dcL..rQ8/9gX7V.k5u0JwfNfINpf0.WLQ1a",
+  "role": "USER_ROLE",
+  "state": true,
+  "remember": false,
+  "google": false,
+  "__v": 0,
+  "img": "https://res.cloudinary.com/softcomsas/image/upload/v1641607064/nacfp0votqj8o2twotsz.jpg"
+},{
+  "_id": {
+    "$oid": "61d8eb360eeb55b3bd0c7113"
+  },
+  "name": "dalenag888",
+  "email": "dalenag888@gmail.com",
+  "password": "$2a$10$UsaLAp5lzW7Q8X6ZR78yI.6ULEEj48BqzOt0rOGR2.2W4cw/ZFF.K",
+  "role": "USER_ROLE",
+  "state": true,
+  "remember": false,
+  "google": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61d8eb440eeb55b3bd0c7117"
+  },
+  "name": "dalenag889",
+  "email": "dalenag889@gmail.com",
+  "password": "$2a$10$eivzaQx60jo6cVS9eXDmuOhXNrpzLvJzK/bFhdLMaghrYAWVSr9oK",
+  "role": "USER_ROLE",
+  "state": true,
+  "remember": false,
+  "google": false,
+  "__v": 0,
+  "img": "https://res.cloudinary.com/softcomsas/image/upload/v1641607064/nacfp0votqj8o2twotsz.jpg"
+}]

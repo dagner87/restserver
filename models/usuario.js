@@ -18,6 +18,7 @@ const UsuarioSchema = Schema({
    },
    img:{
        type:String,
+       default: 'assets/images/dashboard/user5.jpg'
    },
    role:{
     type:String,
