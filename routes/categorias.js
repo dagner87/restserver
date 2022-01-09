@@ -32,7 +32,7 @@ router.get('/',[validarJWT], obtenerCategorias);
 router.post('/',[
     validarJWT,
     check('name','El name es obligatorio').not().isEmpty(),
-    check('state','El state es obligatorio').not().isEmpty(),
+    //check('state','El state es obligatorio').not().isEmpty(),
     validarCampos
 ], crearCategoria);
 

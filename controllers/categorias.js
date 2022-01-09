@@ -35,7 +35,7 @@ const obtenerCategoria = async (req,res = response) => {
 
 const crearCategoria =  async (req, res = response) => {   
     
-    const {descripcion,state} = req.body;
+    const {descripcion} = req.body;
     const name = req.body.name.toUpperCase();
     const categoriaDB = await Categoria.findOne({name});
   
@@ -50,7 +50,7 @@ const crearCategoria =  async (req, res = response) => {
         name,
         descripcion,
         usuario: req.usuario._id,
-        state
+        state:true
     }
    
     const newCategoria = new Categoria(data); 
@@ -59,6 +59,8 @@ const crearCategoria =  async (req, res = response) => {
     await newCategoria.save();
 
     res.status(201).json({
+        ok: true,
+        msg: 'Categoria creada',
         newCategoria
     });
 }
@@ -74,7 +76,9 @@ const actualizarCategoria = async (req,res = response) => {
     const categoria = await Categoria.findByIdAndUpdate(id, data ,{new:true})
                       .populate('usuario','name');
 
-    res.json({     
+    res.json({  
+        ok:true,
+        msg: 'Categoria actualizada',   
      categoria
     });
 
@@ -84,7 +88,9 @@ const eliminarCategoria = async (req,res = response) => {
     const categoriaBorrada = await Categoria.findByIdAndUpdate(id, {state:false} ,{new:true})
                       .populate('usuario','name');
 
-    res.json({     
+    res.json({ 
+        ok:true,
+        msg: 'Categoria eliminada',    
         categoriaBorrada
     });
 
