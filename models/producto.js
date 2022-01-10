@@ -12,7 +12,7 @@ const ProductoShema = Schema({
     },
     img:{
         type:String,
-        default:'no-image.jpg'
+        default: 'assets/images/dashboard/product/1.jpg'
     },
     state:{
         type:Boolean,
@@ -24,6 +24,10 @@ const ProductoShema = Schema({
         default: 0,        
     },
     cantidad: {
+        type:Number,
+        default: 0,        
+    },
+    stock_min: {
         type:Number,
         default: 0,        
     },

@@ -25,7 +25,7 @@ const { cargarArchivo, actualizarArchivo, mostrarImagen, actualizarArchivoCloudi
      validarJWT,
      validarArchivoSubir,
      check('id','No es un id de Mongo válido').isMongoId(),
-     check('coleccion').custom(c => colecionesPermitidas(c , ['usuarios','productos','proveedores'])), 
+     check('coleccion').custom(c => colecionesPermitidas(c , ['usuarios','categorias','productos','proveedores'])), 
      validarCampos
   ], actualizarArchivoCloudinary);// actualizarArchivo
 
@@ -36,7 +36,7 @@ const { cargarArchivo, actualizarArchivo, mostrarImagen, actualizarArchivoCloudi
      validarJWT,
     // validarArchivoSubir,
      check('id','No es un id de Mongo válido').isMongoId(),
-     check('coleccion').custom(c => colecionesPermitidas(c , ['usuarios','productos','proveedores'])), 
+     check('coleccion').custom(c => colecionesPermitidas(c , ['usuarios','categorias','productos','proveedores'])), 
      validarCampos
   ], mostrarImagen);
 

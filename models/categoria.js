@@ -13,6 +13,10 @@ const CategoriaSchema = Schema({
         required:[true,'El descripcion es obligatorio'],   
        
     },
+    img:{
+        type:String,
+        default: 'assets/images/dashboard/product/1.jpg'
+    },
     state:{
         type:Boolean,
         default:true,

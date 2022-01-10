@@ -7,7 +7,7 @@ cloudinary.config(process.env.CLOUDINARY_URL);
 
 const { subirArchivo } = require('../helpers');
 
-const { Usuario, Producto } = require('../models');
+const { Usuario, Producto,Categoria } = require('../models');
 
 
 
@@ -95,6 +95,14 @@ const actualizarArchivoCloudinary = async (req,res = response) => {
         });        
       }
      break;
+     case 'categorias':
+        modelo = await Categoria.findById(id);
+        if (!modelo) {
+          return res.status(400).json({
+            msg: `No existe una categoria con el id ${id}`,
+          });          
+        }
+      break;
      case 'productos':
         modelo = await Producto.findById(id);
         if (!modelo) {
