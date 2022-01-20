@@ -4,11 +4,7 @@ const { Producto, Proveedor, Almacen } = require('../models');
 const myCustomLabels = {
     totalDocs: 'total',
     docs: 'itemsList',
-    limit: 'perPage',
-    page: 'currentPage',
-    nextPage: 'next',
-    prevPage: 'prev',
-    totalPages: 'pageCount'
+   
 };
 
 const query   = {state: true}; 
