@@ -1,7 +1,44 @@
 const { response, request } = require('express');
 const { Producto, Proveedor, Almacen } = require('../models');
 
+const myCustomLabels = {
+    totalDocs: 'total',
+    docs: 'itemsList',
+    limit: 'perPage',
+    page: 'currentPage',
+    nextPage: 'next',
+    prevPage: 'prev',
+    totalPages: 'pageCount'
+};
 
+const options = {
+  customLabels: myCustomLabels,  
+  page: 1,
+  limit: 10,
+  query: { state: true },
+  collation: {
+    locale: "es",
+  },
+  populate: [
+    {
+      path: "almacen",
+      select: "name",
+    },
+    {
+      path: "usuario",
+      select: "name",
+    },
+    {
+      path: "proveedor",
+      select: "name",
+    },
+    {
+      path: "categoria",
+      select: "name",
+    },
+  ],
+  
+};
 
 
 const crearProducto = async (req =request, res = response) => {
@@ -70,6 +107,19 @@ const actualizarProducto = async (req,res = response) => {
 
 }
 
+
+const obtenerProductosPaginados =  async (req, res = response) => {
+
+    await Producto.paginate({},options).then(result => {
+        res.json({
+            result
+        })
+    }).catch(error => {
+        console.log(error);
+    });;
+
+};
+
 const obtenerProductos =  async (req, res = response) => {
 
     const { page = 1, limit= 10 } = req.query;
@@ -115,5 +165,6 @@ module.exports = {
     obtenerProducto,
     obtenerProductos,
     actualizarProducto,
-    eliminarProducto
+    eliminarProducto,
+    obtenerProductosPaginados
 }

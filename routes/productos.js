@@ -14,6 +14,7 @@ const { crearProducto,
        obtenerProducto, 
        actualizarProducto, 
        obtenerProductos,
+       obtenerProductosPaginados,
        eliminarProducto} = require('../controllers/productos');
 
 
@@ -66,7 +67,7 @@ router.get('/:id', [
  validarCampos
 ],obtenerProducto);
 
-router.get('/',[validarJWT], obtenerProductos);
+router.get('/',[validarJWT], obtenerProductosPaginados);
 
 router.delete('/:id', [
   validarJWT,

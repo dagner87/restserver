@@ -1,5 +1,7 @@
 const { Schema, model } = require('mongoose');
 
+const mongoosePaginate = require('mongoose-paginate-v2');
+
 const ProductoShema = Schema({
 
     name:{
@@ -54,7 +56,8 @@ const ProductoShema = Schema({
         type: Schema.Types.ObjectId,
         ref:'Usuario',
         required:true
-    }
+    },
+    created_at : { type : Date, default : Date.now }
     
 
 });
@@ -63,8 +66,8 @@ ProductoShema.methods.toJSON = function () {
     const { __v,state, ...data } = this.toObject();    
     return data;
 }
-
-
+//Paginacion
+ProductoShema.plugin(mongoosePaginate);
 
 module.exports = model('Producto',ProductoShema);
  
