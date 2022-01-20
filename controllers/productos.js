@@ -11,11 +11,13 @@ const myCustomLabels = {
     totalPages: 'pageCount'
 };
 
+const query   = {state: true}; 
+
 const options = {
   customLabels: myCustomLabels,  
   page: 1,
+  //query: {state: false},
   limit: 10,
-  query: { state: true },
   collation: {
     locale: "es",
   },
@@ -110,7 +112,7 @@ const actualizarProducto = async (req,res = response) => {
 
 const obtenerProductosPaginados =  async (req, res = response) => {
 
-    await Producto.paginate({},options).then(result => {
+    await Producto.paginate(query,options).then(result => {
         res.json({
             result
         })
