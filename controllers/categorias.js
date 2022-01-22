@@ -3,9 +3,50 @@ const { response } = require("express");
 const {Categoria} = require('../models');
 
 
+/* Config */
+
+const myCustomLabels = {
+    totalDocs: 'total',
+    docs: 'itemsList',
+   
+};
+
+const query   = {state: true,}; 
+
+const options = {
+  customLabels: myCustomLabels,
+  limit: 20,
+  collation: {
+    locale: "es",
+  },
+  populate: [
+   
+    {
+      path: "usuario",
+      select: "name",
+    },
+   
+  ],
+  
+};
+/** */
+
+const obtenerCategoriasPaginados =  async (req, res = response) => {
+
+    await Categoria.paginate(query,options).then(result => {
+        res.json({
+            result
+        })
+    }).catch(error => {
+        console.log(error);
+    });
+
+};
+
+
 const obtenerCategorias =  async (req, res = response) => {
 
-    const { page = 1, limit= 10 } = req.query;
+    const { page = 1, limit= 20 } = req.query;
     const query   = {state: true}; 
     const [total,categorias] = await Promise.all([
 
@@ -21,6 +62,8 @@ const obtenerCategorias =  async (req, res = response) => {
         categorias
     });
 }
+
+
 
 const obtenerCategoria = async (req,res = response) => {
     const {id} = req.params;
@@ -106,5 +149,6 @@ module.exports = {
     obtenerCategorias,
     obtenerCategoria,
     actualizarCategoria,
-    eliminarCategoria
+    eliminarCategoria,
+    obtenerCategoriasPaginados
 }

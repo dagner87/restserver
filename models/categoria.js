@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate-v2');
 
 const CategoriaSchema = Schema({
 
@@ -35,6 +36,9 @@ CategoriaSchema.methods.toJSON = function () {
     const { __v,state, ...data } = this.toObject();    
     return data;
 }
+
+//Paginacion
+CategoriaSchema.plugin(mongoosePaginate);
 
 
 

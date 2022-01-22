@@ -21,6 +21,7 @@ class Server {
             auth       : '/api/auth',
             usuarios   : '/api/usuarios',
             categorias : '/api/categorias',
+            categorias_sinpaginar : '/api/categorias-sinpaginar',
             productos  : '/api/productos',
             proveedores: '/api/proveedores',
             buscar     : '/api/buscar',
@@ -75,6 +76,8 @@ class Server {
         this.app.use( this.paths.proveedores, require('../routes/proveedores'));
         this.app.use( this.paths.buscar, require('../routes/buscar'));
         this.app.use( this.paths.uploads, require('../routes/uploads'));
+        /*De Prueba */
+        this.app.use( this.paths.categorias_sinpaginar, require('../routes/categorias_sinpaginar'));
     }
 
     sockets() {

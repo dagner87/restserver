@@ -31,7 +31,7 @@ const ProductoShema = Schema({
     },
     stock_min: {
         type:Number,
-        default: 0,        
+        default: 5,        
     },
     disponible: {
         type:Boolean,

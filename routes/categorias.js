@@ -12,6 +12,7 @@ const { exiteCategoriaPorId } = require('../helpers/db-validators');
 
 //Controllers
 const { obtenerCategorias,
+        obtenerCategoriasPaginados,
         obtenerCategoria, 
         actualizarCategoria, 
         crearCategoria, 
@@ -27,6 +28,9 @@ const { obtenerCategorias,
 const router = Router();
 
 
+router.get('/',[validarJWT], obtenerCategoriasPaginados);
+
+//categorias_sinpaginar
 router.get('/',[validarJWT], obtenerCategorias);
 
 router.post('/',[

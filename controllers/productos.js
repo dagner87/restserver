@@ -114,7 +114,7 @@ const obtenerProductosPaginados =  async (req, res = response) => {
         })
     }).catch(error => {
         console.log(error);
-    });;
+    });
 
 };
 
