@@ -16,7 +16,7 @@ const CategoriaSchema = Schema({
     },
     img:{
         type:String,
-        default: 'assets/images/dashboard/product/1.jpg'
+        default: 'assets/images/no-image.png'
     },
     state:{
         type:Boolean,
