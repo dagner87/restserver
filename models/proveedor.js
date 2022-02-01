@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate-v2');
 //Proveedor
 const ProveedorSchema = Schema({
   
@@ -45,5 +46,7 @@ ProveedorSchema.methods.toJSON = function () {
     const { __v,state, ...data } = this.toObject();    
     return data;
 }
+//Paginacion
+ProveedorSchema.plugin(mongoosePaginate);
 
 module.exports = model('Proveedor', ProveedorSchema);

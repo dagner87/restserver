@@ -3,7 +3,49 @@ const { response } = require("express");
 const {Proveedor} = require('../models');
 
 
+
+/* Config */
+
+const myCustomLabels = {
+    totalDocs: 'total',
+    docs: 'itemsList',
+   
+};
+
+const query   = {state: true,}; 
+
+const options = {
+  customLabels: myCustomLabels,
+  limit: 20,
+  collation: {
+    locale: "es",
+  },
+  populate: [
+   
+    {
+      path: "usuario",
+      select: "name",
+    },
+   
+  ],
+  
+};
+/** */
+
 const obtenerProveedores =  async (req, res = response) => {
+
+    await Proveedor.paginate(query,options).then(result => {
+        res.json({
+            result
+        })
+    }).catch(error => {
+        console.log(error);
+    });
+
+};
+
+
+/* const obtenerProveedores =  async (req, res = response) => {
 
     const { page = 1, limit= 10 } = req.query;
     const query   = {state: true}; 
@@ -20,7 +62,7 @@ const obtenerProveedores =  async (req, res = response) => {
         total,
         proveedores
     });
-}
+} */
 
 const obtenerProveedor = async (req,res = response) => {
     const {id} = req.params;
