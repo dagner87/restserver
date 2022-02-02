@@ -1,13 +1,15 @@
 const { response } = require('express');
 const { ObjectId } = require('mongoose').Types;
 
-const { Usuario, Categoria, Producto } = require('../models');
+const { Usuario, Categoria, Producto,StockProduct } = require('../models');
 
 const coleccionesPermitidas = [
     'usuarios',
     'categorias',
     'productos',
-    'roles'
+    'roles',
+    'stock_product'
+
 ];
 
 const buscarUsuarios = async( termino = '', res = response ) => {
@@ -59,7 +61,9 @@ const buscarProductos = async( termino = '', res = response ) => {
 
     if ( esMongoID ) {
         const producto = await Producto.findById(termino)
-                            .populate('categoria','name');
+                            .populate('categoria','name')
+                            .populate('proveedor','name')
+                            .populate('almacen','name');
         return res.json({
             results: ( producto ) ? [ producto ] : []
         });
@@ -75,6 +79,36 @@ const buscarProductos = async( termino = '', res = response ) => {
       .populate('almacen','name')                         
       .populate('usuario','name')                         
       .populate('proveedor','name') ;                          
+
+    res.json({
+        results: productos
+    });
+
+}
+const buscarStockProduct = async( termino = '', res = response ) => {
+
+    const esMongoID = ObjectId.isValid( termino ); // TRUE 
+
+    if ( esMongoID ) {
+         const producto = await StockProduct.findById(termino);
+                          /*  .populate('proveedor','name')
+                            .populate('almacen','name')
+                            .populate('product','name'); */
+        return res.json({
+            results: ( producto ) ? [ producto ] : []
+        });
+    }
+
+    const regex = new RegExp( termino, 'i' );
+    /*const productos = await Producto.find({ name: regex, state: true })
+                            .populate('categoria','name')*/
+  /*   const productos = await Producto.find({
+        $or: [{ name: regex }, { descripcion: regex }],
+        $and: [{ state: true }]
+    }).populate('categoria','name')
+      .populate('almacen','name')                         
+      .populate('usuario','name')                         
+      .populate('proveedor','name') ;     */                      
 
     res.json({
         results: productos
@@ -102,6 +136,9 @@ const buscar = ( req, res = response ) => {
         break;
         case 'productos':
             buscarProductos(termino, res);
+        break;
+        case 'stock_product':
+            buscarStockProduct(termino, res);
         break;
 
         default:
